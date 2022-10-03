@@ -10,7 +10,18 @@ class GlobalAppInfo with ChangeNotifier {
   String _lang = 'C';
   String _text = '';
 
-  List<String> _langList = ['C', 'C++', 'Dart (Wedget)', 'Python'];
+  List<String> _langList = [
+    'C',
+    'C (2)',
+    'C++',
+    'C++ (2)',
+    'C++ (3)',
+    'Dart',
+    'Dart (Wedget)',
+    'Python',
+    'Java',
+    'Kotlin',
+  ];
 
   /// Change The Language Setting
   ///

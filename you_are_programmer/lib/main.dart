@@ -12,6 +12,7 @@ import 'package:you_are_programmer/models/global_app_info.dart';
 
 // Tools
 import 'package:provider/provider.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         title: 'YouAreProgrammer',
         theme: ThemeCyan,
         home: HomePage(),
+        builder: FlutterSmartDialog.init(),
       ),
     );
   }
