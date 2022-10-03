@@ -4,9 +4,13 @@
 // Tools
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:you_are_programmer/tools/lang_gen.dart';
 
 class GlobalAppInfo with ChangeNotifier {
   String _lang = 'C';
+  String _text = '';
+
+  List<String> _langList = ['C', 'C++', 'Dart (Wedget)', 'Python'];
 
   /// Change The Language Setting
   ///
@@ -22,5 +26,22 @@ class GlobalAppInfo with ChangeNotifier {
       notifyListeners();
       return true;
     }
+  }
+
+  String getGenText() {
+    return genLang(text: _text, lang: _lang);
+  }
+
+  void setText(String text) {
+    _text = text;
+    notifyListeners();
+  }
+
+  String getLang() {
+    return _lang;
+  }
+
+  List<String> getLangList() {
+    return _langList;
   }
 }
