@@ -1,0 +1,15 @@
+String initData = 'PHP';
+Widget _demo() {
+    return InkWell(
+    onTap: () {
+      Pickers.showSinglePicker(context,
+          data: ['PHP', 'JAVA', 'C++', 'Dart', 'Python', 'Go'],
+          selectData: initData,
+          onConfirm: (p) {
+            setState(() {
+              initData = p;
+            });
+          }, onChanged: (p) => print('数据发生改变：$p'));
+    },
+    child: Text('$initData'));
+}
